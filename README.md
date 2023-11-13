@@ -2,8 +2,61 @@
 # MMAGIC-Sam
 
 MMAGIC-Sam is a project that leverages the controlnet_animation model from MMAGIC and the SAM model by Meta to generate AI animations and segment images. The following instructions guide you through the installation process and demonstrate how to use the provided scripts to create animated videos.
+##Insall MMAGIC (Follow these steps if you don't have MMAGIC installed already)
+## Prerequisites 🛠️
 
-## Installation
+Before you get started, make sure you have the following dependencies installed:
+
+- Python 3.8 (or a compatible version) 🐍
+- Miniconda ⚙️
+
+## Installation Steps 📦
+
+Follow these simple steps to set up your environment for using the MMagic Stable Diffusion model:
+
+1. **Install [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html) on your system if you haven't already.**
+
+2. **Create a Conda environment and activate it using the following commands:**
+
+   ```bash
+   conda create --name mmagic python=3.8 -y
+   conda activate mmagic
+   ```
+
+3. **Check your CUDA version by running the command:**
+
+   ```bash
+   nvcc --version
+   ```
+
+4. **Install PyTorch by referring to the [official PyTorch documentation](https://pytorch.org/). Select the appropriate configuration based on your system and follow the installation instructions.**
+
+
+5. **Install the `MMCV` library using `MIM`, a package manager for AI and machine learning dependencies. Run the following commands:**
+
+   ```bash
+   pip install -U openmim
+   mim install 'mmcv>=2.0.0'
+   ```
+
+6. **Install `mmengine` from the GitHub repository:**
+
+   ```bash
+   pip install git+https://github.com/open-mmlab/mmengine.git
+   ```
+
+7. **Install the `mmagic` toolbox in editable mode using the following command:**
+
+   ```bash
+   git clone https://github.com/open-mmlab/mmagic.git
+   cd mmagic
+   pip3 install -e . -v
+   ```
+
+   The `-e .` flag is used to install the Python package in editable mode, meaning that any changes made to the source code will be reflected in the installed package.
+
+
+## Installation of SAM
 
 1. Install SAM:
 
@@ -22,6 +75,12 @@ sudo apt install ffmpeg
 ```bash
 mkdir -p checkpoints/sam
 wget -O checkpoints/sam/sam_vit_h_4b8939.pth https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+```
+
+4. Clone this repo
+
+```bash
+https://github.com/adrienckr/controlnet-sam
 ```
 
 ## Usage
