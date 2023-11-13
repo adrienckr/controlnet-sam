@@ -1,7 +1,7 @@
 
-# MMAGIC-Sam
+# Controlnet-Sam
 
-MMAGIC-Sam is a project that leverages the controlnet_animation model from MMAGIC and the SAM model by Meta to generate AI animations and segment images. The following instructions guide you through the installation process and demonstrate how to use the provided scripts to create animated videos.
+Controlnet-Sam is a project that leverages the controlnet_animation model from MMAGIC and the SAM model by Meta to generate AI animations and segment images. The following instructions guide you through the installation process and demonstrate how to use the provided scripts to create animated videos.
 
 ## Insall MMAGIC (Follow these steps if you don't have MMAGIC installed already)
 ## Prerequisites 🛠️
